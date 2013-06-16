@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Template</title>
+		<script type="text/javascript" src="lib/jquery-2.0.2.min.js"></script>
+		<script type="text/javascript" src="lib/core.js"></script>
+	</head>
+	<body>
+		<input type="text" ng-model="data" />
+		<div ng-bind="data"></div>
+	</body>
+	<script>
+		angular.element(document.body).ready(function() {
+			angular.bootstrap(document, []);
+		});
+	</script>
+</html>
