@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app>
+	<head>
+		<meta charset="utf-8" />
+		<title>$injector</title>
+		<script src="../lib/angular.js"></script>
+	</head>
+	<body>
+		<div>{{data.message}}</div>
+	</body>
+	<script type="text/javascript">
+		// setTimeout(function() {
+		// 	angular.module('ng').run(['$rootScope', function($rootScope) {
+		// 		$rootScope.data = {
+		// 			message: "Hello"
+		// 		}
+		// 	}]);
+
+		// 	//angular.injector(['ng']);
+		// 	angular.bootstrap(document, []);
+		// }, 2000);
+		setTimeout(function() {
+			var $scope = angular.element(document).scope();
+			$scope.$apply(function() {
+				$scope.data = {
+					message: "Hello"
+				}
+			})
+		}, 2000);
+		
+			
+	</script>
+</html>
